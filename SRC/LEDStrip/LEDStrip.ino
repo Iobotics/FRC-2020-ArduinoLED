@@ -37,7 +37,7 @@ void setup() {
 void loop() {
   if (receive[4]) {
     FastLED.clear();
-    for (int i = ledNum[0]; i < ledNum[1]; i++) leds[i] = CRGB(I2CValues[0], I2CValues[1], I2CValues[2]);
+    for (int i = ledNum[0]; i < (ledNum[1] + 1); i++) leds[i] = CRGB(I2CValues[0], I2CValues[1], I2CValues[2]);
     FastLED.show();
     for (int i = 0; i < 5; i++) receive[i] = false;
   }
